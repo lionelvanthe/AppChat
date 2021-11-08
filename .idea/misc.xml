@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/backgournd_search_view.xml" value="0.15677083333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/background_chat.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/background_content_bottom.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/background_content_top.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/background_icon.xml" value="0.25833333333333336" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/background_image.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/background_input.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/background_online.xml" value="0.15677083333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/background_received_message.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/background_sent_message.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/brackground_online.xml" value="0.15677083333333333" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/ic_add.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/drawable/ic_back.xml" value="0.15625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/activity_main.xml" value="0.1265625" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/item_container.xml" value="0.2653985507246377" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/item_container_conversion.xml" value="0.21014492753623187" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/item_container_user.xml" value="0.264" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/item_container_user_online.xml" value="0.4" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/m001_splash_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/m002_login_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/m003_home_fragment.xml" value="0.16621376811594202" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/m003_register_fragment.xml" value="0.1911231884057971" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/m004_hom_fragment.xml" value="0.15364583333333334" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/m004_home_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/m005_chat_fragment.xml" value="0.15260416666666668" />
+        <entry key="..\:/Users/ADMIN/AndroidStudioProjects/Appchat/app/src/main/res/layout/m006_setting_fragment.xml" value="0.136" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

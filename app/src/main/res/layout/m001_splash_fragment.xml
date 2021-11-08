@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/t_n_app"
+            android:layout_width="222dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:text="@string/app_name"
+            android:textAppearance="@style/t_n_app"
+            android:lineSpacingExtra="0sp"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_black_900"
+            />
+
+    </RelativeLayout>
+</layout>
