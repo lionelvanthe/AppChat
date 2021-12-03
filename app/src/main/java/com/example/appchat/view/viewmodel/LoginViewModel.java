@@ -1,13 +1,12 @@
 package com.example.appchat.view.viewmodel;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.google.firebase.auth.FirebaseAuth;
+import java.util.HashMap;
 
 public class LoginViewModel extends BaseViewModel{
 
-    public MutableLiveData<Boolean> loginSuccessful = new MutableLiveData();
+    public MutableLiveData<Boolean> loginSuccessful = new MutableLiveData<>();
 
     public void doLogin(String email, String password){
 
@@ -21,6 +20,14 @@ public class LoginViewModel extends BaseViewModel{
                         loginSuccessful.postValue(false);
                     }
                 });
+    }
+
+    public void setUserOnline(){
+        if(firebaseAuth.getUid() != null){
+            HashMap<String, Object> hashMapUser = new HashMap<>();
+            hashMapUser.put("online", true);
+            realtimeDatabase("Profiles").child(firebaseAuth.getUid()).updateChildren(hashMapUser);
+        }
     }
 
 }

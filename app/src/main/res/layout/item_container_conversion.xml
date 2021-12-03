@@ -1,62 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+
+<layout
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <FrameLayout
-        android:id="@+id/frame_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_5sdp"
-        android:layout_marginStart="@dimen/_5sdp"
-        android:layout_marginEnd="@dimen/_5sdp">
-
-        <com.makeramen.roundedimageview.RoundedImageView
-            android:id="@+id/img_profile_conversion"
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_80sdp"
-            android:background="@drawable/background_image"
-            android:scaleType="centerCrop"
-            app:riv_oval="true" />
-
-        <View
-            android:id="@+id/view_online_conversion"
-            android:layout_width="@dimen/_15sdp"
-            android:layout_height="@dimen/_15sdp"
-            android:background="@drawable/background_online"
-            android:layout_marginStart="@dimen/_62sdp"
-            android:layout_marginTop="@dimen/_57sdp"/>
-    </FrameLayout>
-
-    <TextView
-        android:id="@+id/user_name_conversion"
+    <RelativeLayout
+        android:id="@+id/layout_conversion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:text="@string/app_name"
-        android:layout_toEndOf="@+id/frame_layout"
-        android:layout_marginTop="@dimen/_20sdp"/>
+        android:padding="@dimen/_8sdp">
 
-    <TextView
-        android:id="@+id/last_message"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/user_name_conversion"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginBottom="-35dp"
-        android:text="@string/app_name"
-        android:layout_toEndOf="@+id/frame_layout" />
+        <FrameLayout
+            android:id="@+id/frame_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/user_name_conversion"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:layout_marginBottom="-35dp"
-        android:text="@string/app_name"
-        android:layout_toEndOf="@+id/last_message"/>
-</RelativeLayout>
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/img_profile_conversion"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/user"
+                app:riv_oval="true" />
+
+            <View
+                android:id="@+id/view_online_conversion"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_marginStart="@dimen/_38sdp"
+                android:layout_marginTop="@dimen/_33sdp"
+                android:background="@drawable/background_online" />
+
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/user_name_conversion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="212dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/frame_layout"
+            android:text="@string/app_name"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"/>
+
+        <TextView
+            android:id="@+id/last_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toEndOf="@+id/frame_layout"
+            android:layout_below="@+id/user_name_conversion"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:maxWidth="@dimen/_142sdp"/>
+
+        <TextView
+            android:id="@+id/time_conversion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_name_conversion"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="4dp"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+</layout >

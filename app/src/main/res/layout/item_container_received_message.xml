@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_4sdp">
+
+        <TextView
+            android:id="@+id/tv_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/_10ssp"
+            android:visibility="gone"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/img_profile_online"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user"
+            app:riv_oval="true"/>
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:background="@drawable/background_received_message"
+            android:paddingStart="@dimen/_12sdp"
+            android:paddingTop="@dimen/_8sdp"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            android:layout_toEndOf="@+id/img_profile_online" />
+
+        <TextView
+            android:id="@+id/tv_seen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/_10ssp"
+            android:layout_alignTop="@id/tv_message"
+            android:layout_toEndOf="@id/img_profile_online"
+            android:layout_marginStart="@dimen/_9sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:text="@string/seen"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,6 +1,5 @@
 package com.example.appchat.view.fragment;
 
-import android.util.Log;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
@@ -39,7 +38,7 @@ public class M002LoginFragment extends BaseFragment<M002LoginFragmentBinding, Lo
                 mViewModel.doLogin(email, password);
                 mViewModel.loginSuccessful.observe(getViewLifecycleOwner(), aBoolean -> {
                     if(aBoolean ){
-
+                        mViewModel.setUserOnline();
                         gotoHome();
                     }
                     else{

@@ -13,7 +13,7 @@ import com.google.firebase.storage.UploadTask;
 public class RegisterViewModel extends BaseViewModel{
 
     private final StorageReference storage = FirebaseStorage.getInstance().getReference();
-    private MutableLiveData<Boolean> registerSuccessful = new MutableLiveData();
+    private MutableLiveData<Boolean> registerSuccessful = new MutableLiveData<>();
 
     public LiveData<Boolean> doRegister(String name, String email, String password, Uri uri){
         firebaseAuth.createUserWithEmailAndPassword(email, password)
@@ -29,8 +29,9 @@ public class RegisterViewModel extends BaseViewModel{
     }
 
     private void upInfoToProfile(User user){
-        realtimeDatabase("Profiles").child(firebaseAuth.getUid()).setValue(user);
-
+        if(firebaseAuth.getUid() != null){
+            realtimeDatabase("Profiles").child(firebaseAuth.getUid()).setValue(user);
+        }
     }
 
     private void upLoadImage(String id, String name, String email, String password, Uri uri){

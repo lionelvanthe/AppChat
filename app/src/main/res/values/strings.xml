@@ -16,4 +16,6 @@
     <string name="search">search</string>
     <string name="incorrect_email_or_password">Incorrect email or password</string>
     <string name="log_out">Log out</string>
+    <string name="send">send</string>
+    <string name="seen">seen</string>
 </resources>

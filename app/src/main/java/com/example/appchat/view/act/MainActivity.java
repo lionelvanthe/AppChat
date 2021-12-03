@@ -6,6 +6,7 @@ import com.example.appchat.Constants;
 import com.example.appchat.OnActionCallBack;
 import com.example.appchat.R;
 import com.example.appchat.databinding.ActivityMainBinding;
+import com.example.appchat.model.Conversion;
 import com.example.appchat.model.User;
 import com.example.appchat.view.fragment.M001SplashFragment;
 import com.example.appchat.view.fragment.M002LoginFragment;
@@ -62,7 +63,13 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
             case Constants.KEY_SHOW_M005_CHAT:
                 M005ChatFragment m005ChatFragment = new M005ChatFragment();
                 m005ChatFragment.setCallback(this);
-                m005ChatFragment.getUser((User) data);
+                if(data instanceof User){
+                    m005ChatFragment.getUser((User) data);
+                }
+                else{
+                    m005ChatFragment.getConversion((Conversion) data);
+                }
+
                 showFragment(R.id.container_view, m005ChatFragment, true, R.anim.anim_start, R.anim.anim_end);
                 break;
             case Constants.KEY_SHOW_M006_SETTING:
@@ -70,8 +77,18 @@ public class MainActivity extends BaseActivity<ActivityMainBinding, MainViewMode
                 m006SettingFragment.setCallback(this);
                 showFragment(R.id.container_view, m006SettingFragment, true, R.anim.anim_start, R.anim.anim_end);
                 break;
-
-
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        viewModel.onLine(true);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        viewModel.onLine(false);
     }
 }

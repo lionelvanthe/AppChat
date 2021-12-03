@@ -16,7 +16,7 @@ public class M001SplashFragment extends BaseFragment<M001SplashFragmentBinding, 
     }
 
     @Override
-    protected Class getViewModelClass() {
+    protected Class<SplashViewModel> getViewModelClass() {
         return SplashViewModel.class;
     }
 

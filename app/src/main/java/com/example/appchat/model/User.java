@@ -21,7 +21,7 @@ public class User {
         this.name = name;
         this.email = email;
         this.password = password;
-        this.isOnline = true;
+        this.isOnline = false;
         this.url = url;
     }
 

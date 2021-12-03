@@ -53,7 +53,7 @@ public abstract class BaseFragment<K extends ViewDataBinding, V extends ViewMode
                              @Nullable Bundle savedInstanceState) {
 
         mRootView = inflater.inflate(getLayoutId(), container, false);
-        mViewModel = new ViewModelProvider(this).get(getViewModelClass());
+        mViewModel = new ViewModelProvider(requireActivity()).get(getViewModelClass());
         binding = initBinding(mRootView);
 
         initViews();

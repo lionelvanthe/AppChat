@@ -1,7 +1,7 @@
 package com.example.appchat.listener;
 
-import com.example.appchat.model.User;
+import com.example.appchat.model.Conversion;
 
 public interface ConversionListener {
-    void conversionListener(User user);
+    void conversionListener(Conversion conversion);
 }
