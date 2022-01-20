@@ -39,6 +39,7 @@ public class M004HomeFragment extends BaseFragment<M004HomeFragmentBinding, Home
     @Override
     protected void initViews() {
         initRecyclerView();
+        mViewModel.setListUser();
         setUpView();
         binding.imgProfileHome.setOnClickListener(view -> gotoSetting());
     }
@@ -54,7 +55,7 @@ public class M004HomeFragment extends BaseFragment<M004HomeFragmentBinding, Home
     }
 
     private void setUpView(){
-        mViewModel.setListUser();
+
         binding.recyclerViewOnlineUser.setHasFixedSize(true);
         mViewModel.mutableLiveDataUser.observe(getViewLifecycleOwner(), new Observer<List<User>>() {
             @Override

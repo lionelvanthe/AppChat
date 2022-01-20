@@ -35,10 +35,10 @@ public class M002LoginFragment extends BaseFragment<M002LoginFragmentBinding, Lo
                 loading(true);
                 String email = binding.inputEmail.getText().toString().trim();
                 String password = binding.inputPassword.getText().toString().trim();
-                mViewModel.doLogin(email, password);
-                mViewModel.loginSuccessful.observe(getViewLifecycleOwner(), aBoolean -> {
+                mViewModel.doLogin(email, password).observe(getViewLifecycleOwner(), aBoolean -> {
                     if(aBoolean ){
                         mViewModel.setUserOnline();
+                        binding.wrongEmailOrPassword.setVisibility(View.GONE);
                         gotoHome();
                     }
                     else{

@@ -54,26 +54,28 @@ public class HomeViewModel extends BaseViewModel{
     }
 
     public void setListConversion(){
-        realtimeDatabase("Conversion").child(firebaseAuth.getUid()).addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                listConversion.clear();
-                for (DataSnapshot ds: snapshot.getChildren()) {
-                    String lastMessage = ds.getValue(Message.class).getMessage();
-                    String timestamp = ds.getValue(Message.class).getTimestamp();
-                    boolean isSeen = ds.getValue(Message.class).isSeen();
-                    for(User user : listUser){
-                        if(ds.getKey().equals(user.getId())){
-                            listConversion.add(new Conversion(ds.getKey(), user.getName(), lastMessage, timestamp, user.getUrl(), user.isOnline(), isSeen));
+        if(firebaseAuth.getUid() != null){
+            realtimeDatabase("Conversion").child(firebaseAuth.getUid()).addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    listConversion.clear();
+                    for (DataSnapshot ds: snapshot.getChildren()) {
+                        String lastMessage = ds.getValue(Message.class).getMessage();
+                        String timestamp = ds.getValue(Message.class).getTimestamp();
+                        boolean isSeen = ds.getValue(Message.class).isSeen();
+                        for(User user : listUser){
+                            if(ds.getKey().equals(user.getId())){
+                                listConversion.add(new Conversion(ds.getKey(), user.getName(), lastMessage, timestamp, user.getUrl(), user.isOnline(), isSeen));
+                            }
                         }
                     }
+                    mutableLiveDataConversion.postValue(listConversion);
                 }
-                mutableLiveDataConversion.postValue(listConversion);
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
+                }
+            });
+        }
     }
 }

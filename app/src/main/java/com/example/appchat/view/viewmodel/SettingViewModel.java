@@ -8,8 +8,9 @@ public class SettingViewModel extends BaseViewModel{
 
         HashMap<String, Object> hashMapUser = new HashMap<>();
         hashMapUser.put("online", false);
-        realtimeDatabase("Profiles").child(firebaseAuth.getUid()).updateChildren(hashMapUser);
-
+        if(firebaseAuth.getUid() != null){
+            realtimeDatabase("Profiles").child(firebaseAuth.getUid()).updateChildren(hashMapUser);
+        }
         firebaseAuth.signOut();
     }
 }
